@@ -1,0 +1,78 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  margin-top: 20px;
+}
+
+.collapseBox {
+  padding: 0px 10px 0px 10px;
+}
+
+.boxTitle {
+  background-color: #ff6060;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.titleCollapse {
+  margin-inline: 1rem;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.unerolled {
+  display: flex;
+  width: 100%;
+  background-color: rgb(245, 240, 240);
+  border-radius: 0px 0px 5px 5px;
+  transition: all 1s ease-in-out;
+}
+
+.unerolled_hidden {
+  display: flex;
+  opacity: 0;
+  height: 0;
+  animation: fillDown 1s ease-in-out forwards;
+}
+
+.arrow {
+  width: 20px;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.arrow_up {
+  transform: rotate(0deg);
+}
+.arrow_down {
+  transform: rotate(-180deg);
+}
+
+.textContent {
+  padding: 10px;
+  color: #ff6060;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+}
+
+@media (min-width: 760px) {
+  .main {
+    width: 100%;
+  }
+  .collapseBox {
+    display: flex;
+    justify-content: center;
+  }
+  .collapse {
+    width: 70%;
+  }
+}

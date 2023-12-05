@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "font-1";
+  src: url(./assets/fonts/Montserrat/static/Montserrat-Medium.ttf);
+}
+
+$font-1: "font-1", sans-serif;
+
+$color-1: #ff6060;
+$color-2: white;
+$color-3: black;
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}

@@ -1,0 +1,30 @@
+.background {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+}
+.card-content {
+  border-radius: 15px;
+  width: 335px;
+  height: 255px;
+  background: linear-gradient(0deg, rgba(133, 54, 54, 1) 0%, rgba(255, 96, 96, 1) 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 15px;
+
+  font-family: Montserra, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+}
+@media (min-width: 760px) {
+  .background {
+    display: flex;
+    flex-direction: row;
+  }
+}
