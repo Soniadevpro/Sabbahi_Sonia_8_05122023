@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Views/Home/Home";
 import About from "./Views/About/About";
 import Erreur from "./Views/404/Error";
-import Fiche from "./Views/Logement/Logement";
+// import Logement from "./Views/Logement/Logement";
 
 const App = () => {
   return (
@@ -12,8 +12,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />;
         <Route path="/about" element={<About />} />;
-        <Route path="*" element={<Erreur />} />;
-        <Route path="/fiche" element={<Fiche />} />;
+        <Route path="*" element={<Erreur />} />;{/* <Route path="/Logement" element={<Logement />} />; */}
       </Routes>
     </BrowserRouter>
   );
