@@ -1,12 +1,20 @@
 import React from "react";
 
-const Caroussel = ({ slide }) => {
+const Caroussel = ({ slides }) => {
+  if (slides.length === 1) {
+    return (
+      <div className="slider">
+        <img src={slides[0]} alt="Image 1" />
+      </div>
+    );
+  }
+
   return (
     <div>
       <div className="slide">
         {" "}
-        {images.map((image, index) => (
-          <img key={index} src={image} alt={`Image ${index + 1}`} />
+        {slides.map((slide, index) => (
+          <img key={index} src={slide} alt={`Image ${index + 1}`} />
         ))}
       </div>
     </div>
