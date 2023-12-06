@@ -18,7 +18,7 @@ const Logement = () => {
         <>
           <h2>{logement.title}</h2>
           <p>{logement.description}</p>
-          <img src={logement.pictures} alt={logement.titlse} />
+          <img src={logement.cover} alt={logement.title} />
         </>
       )}
       <Footer />
