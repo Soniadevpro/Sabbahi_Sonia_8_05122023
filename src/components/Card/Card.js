@@ -2,8 +2,14 @@ import "./Card.scss";
 
 import React from "react";
 
-const Card = () => {
-  return <div></div>;
+const Card = ({ logement }) => {
+  return (
+    <div className="card">
+      <img src={logement.pictures} alt={logement.title} />
+      <h2>{logement.title}</h2>
+      {/* <p>{logement.description}</p> */}
+    </div>
+  );
 };
 
 export default Card;

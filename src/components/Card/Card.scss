@@ -9,25 +9,44 @@
   height: 150px;
   margin: 22px;
 }
-.card-content {
+
+.card {
   border-radius: 15px;
-  width: 335px;
-  height: 255px;
+  // width: 335px;
+  // height: 255px;
   background: linear-gradient(0deg, rgba(133, 54, 54, 1) 0%, rgba(255, 96, 96, 1) 100%);
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 15px;
 
+  padding: 15px;
   font-family: Montserra, sans-serif;
   font-size: 18px;
   font-weight: 500;
   font-style: normal;
 }
+
 @media (min-width: 760px) {
   .background {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+    background: red;
+    height: 616px;
+
+    border-radius: 10px;
+  }
+
+  .card {
+    border-radius: 15px;
+    width: 335px;
+    height: 255px;
+    background: linear-gradient(0deg, rgba(133, 54, 54, 1) 0%, rgba(255, 96, 96, 1) 100%);
+    color: white;
+
+    padding: 15px;
+    font-family: Montserra, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
   }
 }
