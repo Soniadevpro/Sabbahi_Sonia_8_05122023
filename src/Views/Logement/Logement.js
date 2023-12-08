@@ -19,7 +19,6 @@ const Logement = () => {
   //   }
   return (
     <div>
-      <Header />
       {logement && (
         <>
           <Caroussel slides={logement.pictures} />
@@ -31,7 +30,6 @@ const Logement = () => {
           ))}
         </>
       )}
-      <Footer />
     </div>
   );
 };

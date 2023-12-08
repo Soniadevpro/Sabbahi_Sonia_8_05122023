@@ -18,7 +18,6 @@ const Home = () => {
   // const firstSixLogements = logements.slice(0, 6);
   return (
     <div>
-      <Header />
       <Banner bannerImage={MyBanner} text="Mon text" />
       <div className="background">
         {logementsData.map((logement) => (
@@ -27,8 +26,6 @@ const Home = () => {
           </Link>
         ))}
       </div>
-
-      <Footer />
     </div>
   );
 };

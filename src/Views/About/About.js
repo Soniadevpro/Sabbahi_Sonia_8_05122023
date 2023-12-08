@@ -33,7 +33,6 @@ const About = () => {
 
   return (
     <div>
-      <Header />
       <div className="banner">
         <img src={MyBanner2} alt="bannière"></img>
       </div>
@@ -46,7 +45,6 @@ const About = () => {
           );
         })}
       </main>
-      <Footer />
     </div>
   );
 };
