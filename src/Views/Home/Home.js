@@ -8,20 +8,20 @@ import Card from "../../components/Card/Card";
 import logementsData from "./logements.json";
 import { Link } from "react-router-dom";
 const Home = () => {
-  const [logements, setLogements] = useState([]);
+  // const [logements, setLogements] = useState([]);
 
-  useEffect(() => {
-    setLogements(logementsData);
-  }, []); //dépendance vide pour éxecuter la requête une seule fois.
+  // useEffect(() => {
+  //   setLogements(logementsData);
+  // }, []); //dépendance vide pour éxecuter la requête une seule fois.
 
-  // Utilisez slice pour obtenir les 6 premiers logements
-  const firstSixLogements = logements.slice(0, 6);
+  // // Utilisez slice pour obtenir les 6 premiers logements
+  // const firstSixLogements = logements.slice(0, 6);
   return (
     <div>
       <Header />
-      <Banner bannerImage={MyBanner} />
+      <Banner bannerImage={MyBanner} text="Mon text" />
       <div className="background">
-        {firstSixLogements.map((logement) => (
+        {logementsData.map((logement) => (
           <Link to={`/logement/${logement.id}`} key={logement.id}>
             <Card key={logement.id} logement={logement} />
           </Link>

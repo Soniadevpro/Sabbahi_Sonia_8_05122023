@@ -22,9 +22,9 @@ const Logement = () => {
       <Header />
       {logement && (
         <>
+          <Caroussel slides={logement.pictures} />
           <h2>{logement.title}</h2>
           <p>{logement.description}</p>
-          <Caroussel slides={logement.pictures} />
           <Star rating={logement.rating} />
           {logement.tags.map((tag, index) => (
             <Tag key={index} label={tag} />

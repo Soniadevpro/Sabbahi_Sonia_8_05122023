@@ -3,6 +3,7 @@ import "./Card.scss";
 import React from "react";
 
 const Card = ({ logement }) => {
+  console.log(logement);
   return (
     <div className="card">
       {/* <img src={logement.cover} alt={logement.title} /> */}
