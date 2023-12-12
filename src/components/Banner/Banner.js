@@ -1,10 +1,10 @@
 import React from "react";
 
-const Banner = ({ bannerImage }) => {
+const Banner = ({ bannerImage, text }) => {
   return (
     <div className="banner">
       <img src={bannerImage} alt="Banner"></img>
-      <div className="textImg">Chez vous, partout et ailleurs</div>
+      <p className="textImg">{text}</p> {/* Utilisation de la propriété text ici */}
     </div>
   );
 };

@@ -18,7 +18,7 @@ const Home = () => {
   // const firstSixLogements = logements.slice(0, 6);
   return (
     <div>
-      <Banner bannerImage={MyBanner} text="Mon text" />
+      <Banner bannerImage={MyBanner} text="Chez vous, partout et ailleurs" />
       <div className="background">
         {logementsData.map((logement) => (
           <Link to={`/logement/${logement.id}`} key={logement.id}>

@@ -11,21 +11,29 @@
     filter: brightness(70%);
   }
   .textImg {
-    right: 129px;
     color: white;
     position: absolute;
+    top: 25%; /* Ajustez ces valeurs selon vos besoins */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Choisissez la couleur du texte */
+    font-size: 40px; /* Ajustez la taille du texte */
+    /* Ajoutez d'autres styles si nécessaire */
     font-family: Montserrat;
-    font-size: 24px;
+
     font-style: normal;
     font-weight: 500;
-    top: 100px;
   }
 }
 
 @media (min-width: 760px) {
   .textImg {
     position: absolute;
-    top: 116px;
-    right: 473px;
+    top: 25%; /* Ajustez ces valeurs selon vos besoins */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Choisissez la couleur du texte */
+    font-size: 40px; /* Ajustez la taille du texte */
+    /* Ajoutez d'autres styles si nécessaire */
   }
 }
