@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
-
+import "../Caroussel/Caroussel.scss";
+import ArrowLeft from "../../assets/img/arrowleft.png";
+import ArrowRight from "../../assets/img/arrowright.png";
 const Caroussel = ({ slides }) => {
   // Utilisation du hook d'état (useState) pour suivre l'index de la diapositive actuelle.
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -25,9 +27,13 @@ const Caroussel = ({ slides }) => {
   // pour permettre la navigation entre les diapositives.
   return (
     <div className="slider">
-      <button onClick={prevSlide}>Précédent</button>
-      <img src={slides[currentSlide]} alt={`Slide ${currentSlide + 1}`} />
-      <button onClick={nextSlide}>Suivant</button>
+      <button onClick={prevSlide}>
+        <img className="arrowleft" src={ArrowLeft} alt="flèche gauche" />
+      </button>
+      <img className="slide-image" src={slides[currentSlide]} alt={`Slide ${currentSlide + 1}`} />
+      <button onClick={nextSlide}>
+        <img className="arrowright" src={ArrowRight} alt="flèche droite" />
+      </button>
     </div>
   );
 };

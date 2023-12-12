@@ -1,6 +1,7 @@
 import React from "react";
 import MyBanner2 from "../../assets/img/banner-2.png";
 import Collapse from "../../components/Collapse/Collapse";
+import Banner from "../../components/Banner/Banner";
 
 const About = () => {
   const aboutDatas = [
@@ -29,9 +30,8 @@ const About = () => {
 
   return (
     <div>
-      <div className="banner">
-        <img src={MyBanner2} alt="bannière"></img>
-      </div>
+      <Banner bannerImage={MyBanner2} alt="bannière" />
+
       <main className="main">
         {aboutDatas.map((data) => {
           return (

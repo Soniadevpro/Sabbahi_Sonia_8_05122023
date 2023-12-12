@@ -1,0 +1,24 @@
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  .slide-image {
+    width: 1240px;
+    height: 415px;
+    border-radius: 25px;
+    object-fit: cover;
+  }
+}
+
+button img {
+  position: absolute;
+  top: 328px;
+  cursor: pointer;
+}
+.arrowleft {
+  left: 159px;
+}
+.arrowright {
+  right: 159px;
+}
