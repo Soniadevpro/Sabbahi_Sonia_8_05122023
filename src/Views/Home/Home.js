@@ -1,9 +1,6 @@
 // import axios from "axios"; //importer axios
-import Header from "../../components/Header/Header";
 import Banner from "../../components/Banner/Banner";
 import MyBanner from "../../assets/img/banner-1.png";
-import Footer from "../../components/Footer/Footer";
-import { useEffect, useState } from "react";
 import Card from "../../components/Card/Card";
 import logementsData from "./logements.json";
 import { Link } from "react-router-dom";

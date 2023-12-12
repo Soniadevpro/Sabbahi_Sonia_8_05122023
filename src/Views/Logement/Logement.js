@@ -1,8 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import logementsData from "../Home/logements.json";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 import Caroussel from "../../components/Caroussel/Caroussel";
 import Tag from "../../components/Tag/Tag";
 import Star from "../../components/Star/Star";

@@ -1,10 +1,6 @@
 import React from "react";
-
-import Header from "../../components/Header/Header";
-
 import MyBanner2 from "../../assets/img/banner-2.png";
 import Collapse from "../../components/Collapse/Collapse";
-import Footer from "../../components/Footer/Footer";
 
 const About = () => {
   const aboutDatas = [
