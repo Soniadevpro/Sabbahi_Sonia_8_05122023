@@ -1,3 +1,9 @@
+.logement-global {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 53px 25px 53px;
+}
+
 .logement-container {
   .logement-title {
     color: #ff6060;
@@ -12,5 +18,40 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
+  }
+  .tag-content {
+    display: flex;
+    gap: 10px;
+
+    .tag {
+      border-radius: 10px;
+      background: #ff6060;
+      color: #fff;
+      text-align: center;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      padding: 4px;
+    }
+  }
+  .box-first {
+    display: flex;
+    justify-content: space-between;
+    p {
+      display: flex;
+    }
+    .host img {
+      border-radius: 70px;
+    }
+  }
+  .box-second {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .box-third {
+    display: flex;
+    gap: 5px;
   }
 }

@@ -1,10 +1,11 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, redirect } from "react-router-dom";
 import logementsData from "../Home/logements.json";
 import "../Logement/Logement.scss";
 import Caroussel from "../../components/Caroussel/Caroussel";
 import Tag from "../../components/Tag/Tag";
 import Star from "../../components/Star/Star";
+import Collapse from "../../components/Collapse/Collapse";
 
 const Logement = () => {
   const { id } = useParams();
@@ -14,23 +15,45 @@ const Logement = () => {
   const logement = logementsData.find((logement) => logement.id === id);
   console.log(logement);
 
-  //   if (!logement) {
-  //     return <Redirect to="/erreur404" />;
-  //   }
+  if (!logement) {
+    return <redirect to="/erreur404" />;
+  }
   return (
-    <div>
+    <div className="logement-global">
       {logement && (
         <>
           <Caroussel slides={logement.pictures} />
           <div className="logement-container">
-            <h2 className="logement-title">{logement.title}</h2>
-            <p className="host">{logement.host.name}</p>
-            <img src={logement.host.picture} alt={`Photo de l'hôte ${logement.host.name}`} />
-            <p className="logement-location">{logement.location}</p>
-            <Star rating={Number(logement.rating)} />
-            {logement.tags.map((tag) => (
-              <Tag key={tag} label={tag} />
-            ))}
+            <section className="box-first">
+              <h2 className="logement-title">
+                {logement.title}
+                <p className="logement-location">{logement.location}</p>
+              </h2>
+              <p className="host">
+                {logement.host.name}
+                <img src={logement.host.picture} alt={`Photo de l'hôte ${logement.host.name}`} />
+              </p>
+            </section>
+
+            <section className="box-second">
+              <div className="tag-content">
+                {logement.tags.map((tag) => (
+                  <Tag key={tag} label={tag} />
+                ))}
+              </div>
+              <Star rating={Number(logement.rating)} />
+            </section>
+
+            <section className="box-third">
+              <Collapse title="Description" content={logement.description} />
+              <Collapse
+                title="Équipements"
+                content={logement.equipments.map((equipment, index) => (
+                  <p key={index}>{equipment}</p>
+                ))}
+              />
+              {/* <Collapse title="Équipements" content={logement.equipments.join(", ")} /> */}
+            </section>
           </div>
         </>
       )}

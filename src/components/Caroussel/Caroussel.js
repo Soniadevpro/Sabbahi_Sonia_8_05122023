@@ -3,6 +3,7 @@ import { useState } from "react";
 import "../Caroussel/Caroussel.scss";
 import ArrowLeft from "../../assets/img/arrowleft.png";
 import ArrowRight from "../../assets/img/arrowright.png";
+
 const Caroussel = ({ slides }) => {
   // Utilisation du hook d'état (useState) pour suivre l'index de la diapositive actuelle.
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -36,6 +37,7 @@ const Caroussel = ({ slides }) => {
         </button>
       </div>
       <img className="slide-image" src={slides[currentSlide]} alt={`Slide ${currentSlide + 1}`} />
+      <div className="slide-number">{`${currentSlide + 1} / ${slides.length}`}</div>
     </div>
   );
 };
