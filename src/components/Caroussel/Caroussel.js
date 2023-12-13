@@ -27,13 +27,15 @@ const Caroussel = ({ slides }) => {
   // pour permettre la navigation entre les diapositives.
   return (
     <div className="slider">
-      <button onClick={prevSlide}>
-        <img className="arrowleft" src={ArrowLeft} alt="flèche gauche" />
-      </button>
+      <div className="button-container">
+        <button onClick={prevSlide}>
+          <img className="arrowleft" src={ArrowLeft} alt="flèche gauche" />
+        </button>
+        <button onClick={nextSlide}>
+          <img className="arrowright" src={ArrowRight} alt="flèche droite" />
+        </button>
+      </div>
       <img className="slide-image" src={slides[currentSlide]} alt={`Slide ${currentSlide + 1}`} />
-      <button onClick={nextSlide}>
-        <img className="arrowright" src={ArrowRight} alt="flèche droite" />
-      </button>
     </div>
   );
 };
