@@ -27,7 +27,7 @@ const Logement = () => {
             <p className="host">{logement.host.name}</p>
             <img src={logement.host.picture} alt={`Photo de l'hôte ${logement.host.name}`} />
             <p className="logement-location">{logement.location}</p>
-            <Star rating={logement.rating} />
+            <Star rating={Number(logement.rating)} />
             {logement.tags.map((tag) => (
               <Tag key={tag} label={tag} />
             ))}

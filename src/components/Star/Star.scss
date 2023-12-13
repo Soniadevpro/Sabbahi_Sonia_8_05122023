@@ -1,0 +1,10 @@
+.star span {
+  display: inline-block;
+  background-image: url("../../assets/img/stargrise.svg");
+  width: 18px;
+  height: 16px;
+}
+
+.star span.filled {
+  background-image: url("../../assets/img/starcolor.svg");
+}
