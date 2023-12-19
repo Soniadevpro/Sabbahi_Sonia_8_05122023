@@ -58,3 +58,34 @@
 
   // Ajoutez d'autres styles comme l'arrière-plan semi-transparent si nécessaire
 }
+
+@media (max-width: 759px) {
+  .background {
+    background: white;
+  }
+  .card {
+    border-radius: 15px;
+    position: relative;
+    height: 255px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 23%);
+      border-radius: 15px;
+      z-index: 1;
+    }
+    img {
+      object-fit: cover;
+      width: 320px;
+      border-radius: 15px;
+      // filter: brightness(60%);
+      display: block;
+      height: 255px;
+      position: relative;
+    }
+  }
+}

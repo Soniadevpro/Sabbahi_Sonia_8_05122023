@@ -25,3 +25,12 @@
     font-weight: 500;
   }
 }
+
+@media (max-width: 759px) {
+  .banner {
+    img {
+      width: 95%;
+      height: 98px;
+    }
+  }
+}
