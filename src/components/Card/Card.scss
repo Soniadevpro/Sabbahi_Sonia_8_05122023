@@ -7,22 +7,32 @@
   gap: 60px;
   padding: 20px;
   background: #f6f6f6;
-
   margin: 22px;
 }
 
 .card {
   border-radius: 15px;
-  background: linear-gradient(0deg, rgba(133, 54, 54, 1) 0%, rgba(255, 96, 96, 1) 100%);
   position: relative;
   height: 300px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 23%);
+    border-radius: 15px;
+    z-index: 1;
+  }
   img {
     object-fit: cover;
     width: 320px;
-    border-radius: 10px;
-    filter: brightness(60%);
+    border-radius: 15px;
+    // filter: brightness(60%);
     display: block;
     height: 300px;
+    position: relative;
   }
 }
 
@@ -33,6 +43,7 @@
   font-size: 18px;
   display: flex;
   padding: 8px;
+  z-index: 2;
 }
 .title-overlay {
   position: absolute;
@@ -44,39 +55,6 @@
   align-items: flex-end;
   justify-content: flex-start;
   color: white;
+
   // Ajoutez d'autres styles comme l'arrière-plan semi-transparent si nécessaire
 }
-// @media (min-width: 760px) {
-//   .background {
-//     display: grid;
-//     grid-template-columns: repeat(3, 0.5fr);
-//     justify-items: center;
-//     background: #f6f6f6;
-
-//     border-radius: 10px;
-//   }
-
-//   .card {
-//     border-radius: 15px;
-//     // width: 335px;
-//     // height: 255px;
-//     background: linear-gradient(0deg, rgba(133, 54, 54, 1) 0%, rgba(255, 96, 96, 1) 100%);
-
-//     img {
-//       object-fit: cover;
-//       width: 320px;
-//       border-radius: 10px;
-
-//       filter: brightness(70%);
-//     }
-
-//     h2 {
-//       font-size: 20px;
-//       text-decoration: none;
-//     }
-//   }
-
-//   .title {
-//     display: flex;
-//   }
-// }
