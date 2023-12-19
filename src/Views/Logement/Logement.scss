@@ -6,11 +6,12 @@
 
 .logement-container {
   padding: 30px 0px 0px 0px;
+
   .logement-title {
     color: #ff6060;
     font-family: Montserrat;
     font-size: 36px;
-    font-style: normal;
+
     font-weight: 500;
   }
   .logement-location {
@@ -69,9 +70,19 @@
     gap: 20px;
   }
 }
-.starmedia {
-  display: none;
+.star {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+
+  span img {
+    width: 30px;
+  }
 }
+
+// .starmedia {
+//   display: none;
+// }
 .host {
   display: none;
 }
@@ -79,12 +90,13 @@
 @media (max-width: 659px) {
   .logement-global {
     display: flex;
-    flex-direction: column;
+
     padding: 0px 19px 25px 19px;
   }
   .logement-container {
     display: flex;
     flex-direction: column;
+
     .logement-title {
       font-size: 18px;
       p {
@@ -92,17 +104,26 @@
       }
     }
     .box-first {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start; /* Alignement de .star et .host à gauche */
-      gap: 10px; /* Ajuster l'espace entre .star et .host */
       .host {
         display: none;
       }
     }
+    .box-second {
+      order: 1;
+      flex-direction: column;
+    }
+    .star {
+      position: relative;
+      bottom: -47px;
+      gap: 7px;
+      span img {
+        width: 20px;
+      }
+    }
     .tag-content {
-      /* Règles pour .tag-content */
-      margin-top: 10px; /* Ajuster selon les besoins */
+      margin-top: 10px;
+      flex-wrap: wrap;
+
       .tag {
         font-size: 10px;
       }
@@ -114,6 +135,7 @@
     align-items: center;
     /* gap: 197px; */
     justify-content: space-between;
+    order: 2;
     .host {
       img {
         border-radius: 25px;
@@ -133,13 +155,15 @@
       }
     }
   }
-  .star {
-    display: none;
-  }
+  // .star {
+  //   display: none;
+  // }
   .box-third {
     margin-top: 10px; /* Ajuster selon les besoins */
     display: flex;
     flex-direction: column;
+    width: 100%;
+    order: 3;
     .titleCollapse {
       font-size: 13px;
     }
