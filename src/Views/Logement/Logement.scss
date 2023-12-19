@@ -70,34 +70,78 @@
   }
 }
 .starmedia {
-  // display: none;
+  display: none;
+}
+.host {
+  display: none;
 }
 
-@media (max-width: 759px) {
+@media (max-width: 659px) {
+  .logement-global {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 19px 25px 19px;
+  }
   .logement-container {
     display: flex;
     flex-direction: column;
+    .logement-title {
+      font-size: 18px;
+      p {
+        font-size: 14px;
+      }
+    }
+    .box-first {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Alignement de .star et .host à gauche */
+      gap: 10px; /* Ajuster l'espace entre .star et .host */
+      .host {
+        display: none;
+      }
+    }
+    .tag-content {
+      /* Règles pour .tag-content */
+      margin-top: 10px; /* Ajuster selon les besoins */
+      .tag {
+        font-size: 10px;
+      }
+    }
   }
 
-  .logement-title {
-    /* Règles pour .logement-title */
-  }
-
-  .tag-content {
-    /* Règles pour .tag-content */
-    margin-top: 10px; /* Ajuster selon les besoins */
-  }
-
-  .box-first {
+  .media {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Alignement de .star et .host à gauche */
-    gap: 10px; /* Ajuster l'espace entre .star et .host */
+    align-items: center;
+    /* gap: 197px; */
+    justify-content: space-between;
+    .host {
+      img {
+        border-radius: 25px;
+      }
+    }
+    .starmedia {
+      display: flex;
+    }
+    .host {
+      display: flex;
+      font-size: 12px;
+      font-family: Montserrat, sans-serif;
+      color: #ff6060;
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
   }
   .star {
     display: none;
   }
   .box-third {
     margin-top: 10px; /* Ajuster selon les besoins */
+    display: flex;
+    flex-direction: column;
+    .titleCollapse {
+      font-size: 13px;
+    }
   }
 }

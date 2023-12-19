@@ -45,3 +45,46 @@
     filter: brightness(80%);
   }
 }
+
+@media (max-width: 659px) {
+  .slider {
+    .slide-number {
+      position: absolute;
+      bottom: 10px; // Ajustez cette valeur selon vos besoins
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      // Ajoutez ici d'autres styles pour la mise en forme du texte si nécessaire
+    }
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        img {
+          width: 20px; // taille de l'image
+          height: auto;
+        }
+      }
+    }
+    .slide-image {
+      border-radius: 25px;
+      width: 100%;
+      height: 255px;
+      object-fit: cover;
+      filter: brightness(80%);
+    }
+  }
+}
