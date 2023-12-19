@@ -10,3 +10,17 @@
   background-image: url("../../assets/img/star-active.png");
   font-size: 20;
 }
+
+@media (max-width: 759px) {
+  .starmedia span {
+    display: inline-block;
+    background-image: url("../../assets/img/star-inactive.png");
+    width: 18px;
+    height: 16px;
+    padding: 4px;
+  }
+  .starmedia span.filled {
+    background-image: url("../../assets/img/star-active.png");
+    font-size: 20;
+  }
+}

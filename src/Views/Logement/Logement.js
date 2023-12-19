@@ -6,6 +6,7 @@ import Caroussel from "../../components/Caroussel/Caroussel";
 import Tag from "../../components/Tag/Tag";
 import Star from "../../components/Star/Star";
 import Collapse from "../../components/Collapse/Collapse";
+import StarMedia from "../../components/Star/Star2";
 
 const Logement = () => {
   const { id } = useParams();
@@ -35,6 +36,7 @@ const Logement = () => {
                 {logement.title}
                 <p className="logement-location">{logement.location}</p>
               </h2>
+              <StarMedia rating={Number(logement.rating)} />
               <p className="host">
                 {logement.host.name}
                 <img src={logement.host.picture} alt={`Photo de l'hôte ${logement.host.name}`} />

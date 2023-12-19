@@ -66,6 +66,38 @@
 
   .box-third {
     display: flex;
-    gap: 5px;
+    gap: 20px;
+  }
+}
+.starmedia {
+  // display: none;
+}
+
+@media (max-width: 759px) {
+  .logement-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logement-title {
+    /* Règles pour .logement-title */
+  }
+
+  .tag-content {
+    /* Règles pour .tag-content */
+    margin-top: 10px; /* Ajuster selon les besoins */
+  }
+
+  .box-first {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alignement de .star et .host à gauche */
+    gap: 10px; /* Ajuster l'espace entre .star et .host */
+  }
+  .star {
+    display: none;
+  }
+  .box-third {
+    margin-top: 10px; /* Ajuster selon les besoins */
   }
 }
