@@ -1,13 +1,12 @@
 .star span {
   display: inline-block;
-  background-image: url("../../assets/img/stargrise.png");
+  background-image: url("../../assets/img/star-inactive.png");
   width: 18px;
   height: 16px;
+  padding: 4px;
 }
 
 .star span.filled {
-  background-image: url("../../assets/img/starcolor.png");
-}
-.filled {
-  font-size: 48px;
+  background-image: url("../../assets/img/star-active.png");
+  font-size: 20;
 }

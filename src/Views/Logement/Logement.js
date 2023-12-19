@@ -1,5 +1,5 @@
-import React from "react";
-import { useParams, redirect } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import logementsData from "../Home/logements.json";
 import "../Logement/Logement.scss";
 import Caroussel from "../../components/Caroussel/Caroussel";
@@ -15,9 +15,15 @@ const Logement = () => {
   const logement = logementsData.find((logement) => logement.id === id);
   console.log(logement);
 
-  if (!logement) {
-    return <redirect to="/erreur404" />;
-  }
+  const navigate = useNavigate(); // Créez une instance de navigate
+
+  const logementred = logementsData.find((logement) => logement.id === id);
+
+  useEffect(() => {
+    if (!logementred) {
+      navigate("/erreur404"); // Redirigez vers /erreur404 si aucun logement n'est trouvé
+    }
+  }, [logement, navigate]);
   return (
     <div className="logement-global">
       {logement && (

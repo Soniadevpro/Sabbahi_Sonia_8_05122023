@@ -23,6 +23,7 @@
   .tag-content {
     display: flex;
     gap: 10px;
+    margin-top: 10px;
 
     .tag {
       border-radius: 10px;
@@ -44,7 +45,7 @@
     p {
       display: flex;
       color: #ff6060;
-
+      gap: 10px;
       text-align: right;
       font-family: Montserrat;
       font-size: 18px;
@@ -60,7 +61,7 @@
   .box-second {
     display: flex;
     justify-content: space-between;
-    padding: 20px 0px 24px 0px;
+    padding: 10px 0px 24px 0px;
   }
 
   .box-third {
