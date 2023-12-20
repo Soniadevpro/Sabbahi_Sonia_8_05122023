@@ -68,6 +68,9 @@
   .box-third {
     display: flex;
     gap: 20px;
+    .collapse {
+      width: 50%;
+    }
   }
 }
 .star {

@@ -13,8 +13,8 @@
   .textImg {
     color: white;
     position: absolute;
-    top: 30%; /* Ajustez ces valeurs selon vos besoins */
-    left: 50%;
+    top: 209px; /* Ajustez ces valeurs selon vos besoins */
+    left: 40%;
     transform: translate(-50%, -50%);
     color: white; /* Choisissez la couleur du texte */
     font-size: 48px; /* Ajustez la taille du texte */
@@ -26,11 +26,17 @@
   }
 }
 
-@media (max-width: 759px) {
+@media (max-width: 659px) {
   .banner {
     img {
       width: 95%;
       height: 98px;
+    }
+    .textImg {
+      position: absolute;
+      top: 136px; /* Ajustez ces valeurs selon vos besoins */
+      left: 40%;
+      font-size: 24px;
     }
   }
 }
