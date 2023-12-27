@@ -42,7 +42,7 @@
   .box-first {
     display: flex;
     justify-content: space-between;
-
+    gap: 120px;
     p {
       display: flex;
       color: #ff6060;
@@ -63,6 +63,7 @@
     display: flex;
     justify-content: space-between;
     padding: 10px 0px 24px 0px;
+    gap: 30px;
   }
 
   .box-third {
@@ -114,6 +115,7 @@
     .box-second {
       order: 1;
       flex-direction: column;
+      gap: 0px;
     }
     .star {
       position: relative;
@@ -136,26 +138,24 @@
   .media {
     display: flex;
     align-items: center;
-    /* gap: 197px; */
     justify-content: space-between;
     order: 2;
-    .host {
-      img {
-        border-radius: 25px;
-      }
-    }
-    .starmedia {
-      display: flex;
-    }
+
     .host {
       display: flex;
       font-size: 12px;
       font-family: Montserrat, sans-serif;
       color: #ff6060;
+      gap: 10px;
       img {
         width: 32px;
         height: 32px;
+        border-radius: 25px;
       }
+    }
+
+    .starmedia {
+      display: flex;
     }
   }
   // .star {

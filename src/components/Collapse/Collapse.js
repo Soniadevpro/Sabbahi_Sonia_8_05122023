@@ -23,7 +23,7 @@ const Collapse = ({ title, content }) => {
           {/* Affichage du contenu. Si c'est un tableau, chaque élément est rendu dans un paragraphe */}
           {Array.isArray(content)
             ? content.map((item, index) => {
-                return <p key={index}>{item}</p>; // Chaque élément du tableau est rendu comme un paragraphe
+                return <div key={index}>{item}</div>; // Chaque élément du tableau est rendu comme un paragraphe
               })
             : content}
         </div>

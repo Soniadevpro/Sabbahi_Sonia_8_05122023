@@ -1,11 +1,12 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client"; // Importation modifiée
 import App from "./App";
 import "./index.scss";
 
 const root = document.getElementById("root");
 
-const app = <App />;
+// Créez la racine en utilisant la nouvelle API
+const reactRoot = createRoot(root);
 
-const reactRoot = ReactDOM.createRoot(root);
-reactRoot.render(app);
+// Rendre votre application
+reactRoot.render(<App />);
