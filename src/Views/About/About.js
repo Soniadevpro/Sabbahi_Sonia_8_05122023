@@ -1,10 +1,13 @@
-import React from "react";
-import MyBanner2 from "../../assets/img/banner-2.png";
-import Collapse from "../../components/Collapse/Collapse";
-import Banner from "../../components/Banner/Banner";
+import React from "react"; // Importation de React
+import MyBanner2 from "../../assets/img/banner-2.png"; // Importation de l'image de la bannière
+import Collapse from "../../components/Collapse/Collapse"; // Importation du composant Collapse
+import Banner from "../../components/Banner/Banner"; // Importation du composant Banner
 
+// Composant About pour la page 'À propos'
 const About = () => {
+  // Données à afficher sur la page 'À propos'
   const aboutDatas = [
+    // Chaque objet contient un id, un titre et un contenu pour chaque section
     {
       id: "1",
       title: "Fiabilité",
@@ -29,12 +32,17 @@ const About = () => {
   ];
 
   return (
+    // Conteneur principal de la page 'À propos'
     <div>
+      {/* Affichage de la bannière avec une image importée */}
       <Banner bannerImage={MyBanner2} alt="bannière" />
 
+      {/* Conteneur principal du contenu de la page */}
       <main className="main">
+        {/* Itération sur les données aboutDatas pour créer un composant Collapse pour chaque élément */}
         {aboutDatas.map((data) => {
           return (
+            // Boîte contenant chaque composant Collapse avec une clé unique
             <div className="collapseBox" key={data.id}>
               <Collapse title={data.title} content={data.content}></Collapse>
             </div>
@@ -45,4 +53,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default About; // Exportation du composant About pour utilisation dans d'autres parties de l'application
