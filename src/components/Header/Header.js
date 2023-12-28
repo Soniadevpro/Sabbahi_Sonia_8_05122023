@@ -15,12 +15,12 @@ function Header() {
         <ul>
           {/* NavLink vers la page d'accueil */}
           <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}>
-            <li>ACCUEIL</li>
+            <li>Accueil</li>
           </NavLink>
 
           {/* NavLink vers la page 'À propos' */}
           <NavLink to="/about" className={(nav) => (nav.isActive ? "nav-active" : "")}>
-            <li>A PROPOS</li>
+            <li>A propos</li>
           </NavLink>
         </ul>
       </div>
