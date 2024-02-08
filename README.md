@@ -1,6 +1,6 @@
 # Kasa ! - Projet 8 🏠
 
-
+![TexteAlternatif](src/assets/img/kasa-readme.png)
 
 ## Notre mission : 🚀
 
